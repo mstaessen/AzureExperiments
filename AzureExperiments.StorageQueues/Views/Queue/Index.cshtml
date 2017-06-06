@@ -1,0 +1,21 @@
+@using AzureExperiments.StorageQueues.Controllers
+@model QueueViewModel
+
+@{
+    ViewBag.Title = "Queue Status";
+    Layout = "_Layout";
+}
+
+<h2>
+    Queue Status:
+    @if (Model.IsStarted) {
+        @:Running
+    } else {
+        @:Not Running
+    }
+</h2>
+
+<a asp-action="Start">Start</a>
+<a asp-action="Stop">Stop</a>
+
+
